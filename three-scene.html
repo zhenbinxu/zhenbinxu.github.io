@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
+
+<head>
 <script src="js/three.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+<script>
+    // Fallback to loading jQuery from a local path if the CDN is unavailable
+    (window.jQuery || document.write('<script src="/js/jquery-1.9.0.min.js"><\/script>'));
+</script>
+</head>
+
+<body>
 <script>
 var scene, camera, renderer;
 var geometry, material, mesh;
@@ -35,4 +45,7 @@ function animate() {
     renderer.render(scene, camera);
 }
 </script>
+
+</body>
+
 </html>
