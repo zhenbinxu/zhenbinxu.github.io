@@ -3,10 +3,10 @@
 
 <head>
 <script src="js/three.min.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+<script src="https://cdnsrc.asp.net/ajax/jquery/jquery-3.1.1.min.js"></script>
 <script>
     // Fallback to loading jQuery from a local path if the CDN is unavailable
-    (window.jQuery || document.write('<script src="/js/jquery-1.9.0.min.js"><\/script>'));
+    (window.jQuery || document.write('<script src="/js/jquery-3.1.1.min.js"><\/script>'));
 </script>
 </head>
 
@@ -14,9 +14,6 @@
 <script>
 var scene, camera, renderer;
 var geometry, material, mesh;
-
-init();
-animate();
 
 function init() {
     scene = new THREE.Scene();
@@ -44,6 +41,13 @@ function animate() {
 
     renderer.render(scene, camera);
 }
+
+$(document).ready(function() {
+    console.log("ready!");
+    init();
+    animate();
+});
+
 </script>
 
 </body>
